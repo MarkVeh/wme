@@ -125,4 +125,23 @@ function sortTable(ascDesc,col) {
 function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
+/*
+(function () {
 
+    var jsOffset = document.getElementById("js-offset"),
+        jsOffsetY = document.getElementById("js-offset").offsetTop,
+        navFiller = document.getElementById("navFiller");
+
+    function checkScroll(ev) {
+        if (window.pageYOffset > jsOffsetY && jsOffset.className === "") {
+            jsOffset.className = "follow";
+            navFiller.style.display = "block";
+        } else if (window.pageYOffset < jsOffsetY && navFiller.style.display === "block") {
+            jsOffset.className = "";
+            navFiller.style.display = "none";
+        }
+    }
+    window.onscroll = checkScroll;
+
+}());
+*/
