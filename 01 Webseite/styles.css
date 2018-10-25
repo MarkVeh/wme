@@ -1,0 +1,98 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	line-height: 145%;
+}
+
+div[id="PageContainer"]{
+	box-sizing: border-box;
+	margin: 30px;
+}
+
+div[id="TextBox"]{
+	box-sizing: border-box;
+	padding: 10px;
+	border: 1px solid grey;
+	border-top: 1px solid green;
+	box-shadow: 1px 1px 5px grey;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	column-count: 3;
+}
+
+img[id="sortImage"] {
+    height: 13px;
+    width: 13px;
+	cursor: pointer;
+}
+
+img[id="logo"]{
+	cursor: pointer;
+}
+
+nav{
+	font-family: 'Font Awesome';
+}
+A:hover { 
+	color: purple;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+p[id="showHide"],a{
+	color: grey;
+}
+
+
+table{
+    width: 100%;
+	border-collapse: collapse;
+}
+
+col{
+	visibility: visible;
+}
+
+td{padding: 8px;}
+th {
+	font-style: bold;
+	font-size: 15px;
+    height: 50px;
+	text-align: left;
+	vertical-align: center;
+	border-bottom: 2px solid #d8d8d8;
+	background-color: white;
+	
+}
+
+td {
+    vertical-align: center;
+}
+
+tr:nth-child(even) {
+	background-color: #d8d8d8;
+}
+tr[id="foot"]{
+	background-color: white;
+}
+td[id="foot"]{
+	padding: 2px;
+}
+
+footer{
+	border-top: 1px solid green;
+}
+
+@media screen and (max-width: 320px){
+	div[id="TextBox"]{
+		column-count: 1;
+	}
+}
+
+@media screen and (max-width: 768px){
+	div[id="TextBox"]{
+		column-count: 2;
+	}
+}

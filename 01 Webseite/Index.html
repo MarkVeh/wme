@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	</head>
+	<body>
+		<header>
+			<title>World Data</title>
+			<meta name="description" content="Overview of world Data">
+			<meta name="author" content="Alexander Walther und Mark Vehlow">
+			<meta name="keywords" content="world, data">
+			<meta charset="utf-8"/>
+			
+			<img id="logo" src="images/logo_colored.png" alt="logo" onmouseover="src='images/logo_grey.png'" onmouseout="src='images/logo_colored.png'">
+			<nav> Nav </nav>
+		</header>
+		<div id="PageContainer">
+			<h1>
+				World Data Overview...
+			</h1>
+			<div id="TextBox">
+				Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus
+			</div>
+				
+			<p id = "showHide"> 
+				Show/Hide: <a href="javascript:showHide(2)">birth rate</a> | <a href="javascript:showHide(3)">cellphones</a> | <a href="javascript:showHide(4)">children / woman</a> | <a href="javascript:showHide(5)">electric usage</a> | <a href="javascript:showHide(6)">internet usage</a>
+			</p>
+			<table id="dataTable"> 
+				<col id="col1"/>
+				<col id="col2"/>
+				<col id="col3"/>
+				<col id="col4"/>
+				<col id="col5"/>
+				<col id="col6"/>
+				<col id="col7"/>
+				<thead>
+					<tr> 
+						<th> ID </th>
+						<th> Country 
+							<img id="sortImage" src="images/up.png" alt="up" onclick="sortTable('desc',1)" onmouseover="src='images/up_black.png'" onmouseout="src='images/up.png'">
+							<img id="sortImage" src="images/down.png" alt="down" onclick="sortTable('asc',1)" onmouseover="src='images/down_black.png'" onmouseout="src='images/down.png'">
+						</th>
+						<th> 
+							birth rate/100
+							<img id="sortImage" src="images/up.png" alt="logo" onclick="sortTable('desc',2)" onmouseover="src='images/up_black.png'" onmouseout="src='images/up.png'">
+							<img id="sortImage" src="images/down.png" alt="logo" onclick="sortTable('asc',2)" onmouseover="src='images/down_black.png'" onmouseout="src='images/down.png'">
+						</th>
+						<th> 
+							cellphones /100 
+							<img id="sortImage" src="images/up.png" alt="logo" onclick="sortTable('desc',3)" onmouseover="src='images/up_black.png'" onmouseout="src='images/up.png'">
+							<img id="sortImage" src="images/down.png" alt="logo" onclick="sortTable('asc',3)" onmouseover="src='images/down_black.png'" onmouseout="src='images/down.png'">
+						</th>
+						<th> 
+							children/woman
+							<img id="sortImage" src="images/up.png" alt="logo" onclick="sortTable('desc',4)" onmouseover="src='images/up_black.png'" onmouseout="src='images/up.png'">
+							<img id="sortImage" src="images/down.png" alt="logo" onclick="sortTable('asc',4)" onmouseover="src='images/down_black.png'" onmouseout="src='images/down.png'">
+						</th>
+						<th> 
+							electric usage 
+							<img id="sortImage" src="images/up.png" alt="logo" onclick="sortTable('desc',5)" onmouseover="src='images/up_black.png'" onmouseout="src='images/up.png'">
+							<img id="sortImage" src="images/down.png" alt="logo" onclick="sortTable('asc',5)" onmouseover="src='images/down_black.png'" onmouseout="src='images/down.png'">	
+						</th>
+						<th> 
+							internet usage 
+							<img id="sortImage" src="images/up.png" alt="logo" onclick="sortTable('desc',6)" onmouseover="src='images/up_black.png'" onmouseout="src='images/up.png'">
+							<img id="sortImage" src="images/down.png" alt="logo" onclick="sortTable('asc',6)" onmouseover="src='images/down_black.png'" onmouseout="src='images/down.png'">
+						</th>
+					</tr> 
+				</thead>
+				<tbody id="tableBody"></tbody>
+			</table>
+			
+			<p id = "showHide"> 
+				Show/Hide: <a href="javascript:showHide(2)">birth rate</a> | <a href="javascript:showHide(3)">cellphones</a> | <a href="javascript:showHide(4)">children / woman</a> | <a href="javascript:showHide(5)">electric usage</a> | <a href="javascript:showHide(6)">internet usage</a>
+			</p>		
+		</div>		
+		<script type="text/javascript" src="Functions.js"></script>
+	</body>
+	<footer>
+		<table>
+			<tr id="foot">
+				<td id="foot">Copyright &copy 2018 world_data</td>
+				<td id="foot">This solution has been created by:</td>
+			</tr>
+			<tr id="foot">
+				<td id="foot">First course exercise <b>HTML, CSS and JS</b> of the lecture Web- and Multmedia Engineering</td>
+				<td id="foot">Team 22</td>
+			</tr>
+		</table>
+	</footer>
+</html>
