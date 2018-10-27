@@ -102,40 +102,28 @@ footer{
 }
 
 
-nav {
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 	background-color: #F4F4F4;
-	display:inline-block;
 }
 
-/*Strip the ul of padding and list styling*/
-nav ul {
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	position: absolute;
-}
-/*Create a horizontal list with spacing*/
 li {
-	display:inline-block;
-	float: inside;
-	margin-right: 1px;
+	float: left;
 }
 
-/*Style for menu links*/
 li a {
-	display:block;
-	min-width:140px;
-	height: 50px;
+	display: block;
+	color: black;
 	text-align: center;
-	line-height: 50px;
-	font-family: "Font Awesome";
-	color: #fff;
-	background: #2f3036;
+	padding: 14px 16px;
 	text-decoration: none;
 }
 
+/* Change the link color to #111 (black) on hover */
 li a:hover {
-	background-color: #f3f3f3;
-	border-bottom-color: #cb3837;
+	background-color: #111;
 }
 
