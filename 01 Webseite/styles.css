@@ -1,9 +1,10 @@
 body{
-	margin-top: 50px;
+	/*margin-top: 50px;*/
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	line-height: 145%;
+    padding-top: 70px;
 }
 
 div[id="PageContainer"]{
@@ -30,12 +31,14 @@ img[id="sortImage"] {
 
 img[id="logo"]{
 	cursor: pointer;
+    margin-right: 5px;
+    border-right: white;
 }
 
 header {
-     background: #F4F4F4;
-     z-index: 100;
-	position: relative;
+    background: #F4F4F4;
+    z-index: 100;
+    position: relative;
 }
 
 A:hover { 
@@ -107,23 +110,41 @@ ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #F4F4F4;
+    background: linear-gradient(to bottom, lightgrey, #F4F4F4);
 }
 
 li {
 	float: left;
+    text-align: left;
+    border-left: #d8d8d8;
+    border-left-style: solid;
 }
 
-li a {
-	display: block;
+#navbar a {
+	display: inline-block;
+    height: 55px;
 	color: black;
-	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+    vertical-align: middle;
+    line-height: 55px;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-	background-color: #111;
+#navbar a:hover {
+	background-color: #d8d8d8;
 }
 
+.content {
+    padding: 16px;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}

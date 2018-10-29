@@ -145,3 +145,7 @@ function isNumber(n) {
 
 }());
 */
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+navbar.classList.add("sticky");
