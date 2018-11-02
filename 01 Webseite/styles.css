@@ -32,6 +32,7 @@ img[id="sortImage"] {
 img[id="logo"]{
 	cursor: pointer;
     margin-right: 5px;
+    margin-left: 5px;
     border-right: white;
 }
 
@@ -111,13 +112,15 @@ ul {
 	padding: 0;
 	overflow: hidden;
     background: linear-gradient(to bottom, lightgrey, #F4F4F4);
+	height: 100%;
 }
 
 li {
 	float: left;
     text-align: left;
-    border-left: #d8d8d8;
-    border-left-style: solid;
+    border-right: #d8d8d8;
+    border-right-style: solid;
+	height: 100%;
 }
 
 #navbar a {
@@ -128,6 +131,8 @@ li {
 	text-decoration: none;
     vertical-align: middle;
     line-height: 55px;
+    -webkit-transition: background-color 1s;
+	height: 100%;
 }
 
 #navbar a:hover {

@@ -1,4 +1,4 @@
-d3.csv('world_data_v1.csv', function(error,rows) {
+ d3.csv('world_data_v1.csv', function(error,rows) {
 	var myTableContent = new Array();
 	var i = 0;
 	rows.forEach(function(d){
